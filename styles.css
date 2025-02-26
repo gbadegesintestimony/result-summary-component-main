@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --light-red: hsl(0, 100%, 67%);
+  --orangey-yellow: hsl(39, 100%, 56%);
+  --green-teal: hsl(166, 100%, 37%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+
+  --light-slate-blue: hsl(252, 100%, 67%);
+  --light-royal-blue: hsl(241, 81%, 54%);
+
+  --violet-blue: hsla(256, 72%, 46%, 1);
+  --persian-blue: #2421ca00;
+
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+
+  --font-family: "Hanken Grotesk", sans-serif;
+  --font-size: 18px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--pale-blue);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: auto; /* Pushes it to the bottom */
+  padding-bottom: 10px; /* Adds some spacing */
+}
+
+.result__card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65vh;
+  width: 50vw;
+  margin: auto;
+  margin-top: 15vh;
+  border-radius: 20px;
+  background-color: var(--white);
+}
+
+.result__card-left {
+  flex: 1;
+  background-color: var(--light-royal-blue);
+  border-radius: 20px;
+  height: 100%;
+  padding: 30px 20px;
+  color: var(--white);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.result__card-left-circle {
+  background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.result__card-left-circle h1 {
+  font-size: 50px;
+}
+
+.result__card-left-circle span {
+}
+
+.result__card-left h3 {
+  color: var(--light-lavender);
+}
+
+.result__card-left h2 {
+  font-size: 24px;
+}
+
+.result__card-left p {
+  font-size: 15px;
+  width: 220px;
+  margin: 0 auto;
+  color: var(--light-lavender);
+}
+
+.result__card-right {
+  flex: 1;
+  background-color: var(--white);
+  padding: 4rem 3rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.result__card-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 10px;
+  border-radius: 10px;
+}
+
+.result__card-item-left {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.result__card-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.result__card-button {
+  width: 100%;
+  background-color: var(--dark-gray-blue);
+  font-family: inherit;
+  color: var(--white);
+  padding: 12px;
+  border: none;
+  margin-top: 1.5rem;
+  border-radius: 30px;
+}
+
+.result__card-reaction {
+  background-color: rgba(225, 87, 87, 0.1);
+  color: var(--light-red);
+}
+
+.result__card-memory {
+  background-color: rgba(255, 179, 25, 0.2);
+  color: var(--orangey-yellow);
+}
+
+.result__card-verbal {
+  background-color: rgba(0, 201, 255, 0.2);
+  color: var(--green-teal);
+}
+
+.result__card-visual {
+  background-color: rgba(56, 84, 235, 0.2);
+  color: var(--cobalt-blue);
+}
+
+.result__card-reaction h4 {
+  color: var(--light-red);
+}
+
+.score {
+  font-size: 15px;
+}
+
+.score > span:first-child {
+  color: var(--dark-gray-blue);
+  font-family: 700;
+}
+
+.score > span:last-child {
+  color: rgb(165 162 167);
+}
+
+@media screen and (max-width: 768px) {
+  .result__card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    /* height: 65vh; */
+    margin-top: 0;
+    font-size: 12px;
+  }
+
+  .result__card-left {
+    padding: 8px;
+    width: 100%;
+    padding-top: 2rem;
+    height: 90%;
+    border-radius: 0;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+
+  .result__card-right {
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .attribution {
+    display: none;
+  }
+}
